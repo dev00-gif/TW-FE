@@ -1,3 +1,4 @@
+import { createUuid } from '@/utils/uuid'
 import { asPackets, bulletinKey, field } from './types'
 import type { Packet, ServiceCode } from './types'
 
@@ -14,10 +15,10 @@ export function newBulletinRequest(code: ServiceCode, input: Packet): Packet {
   const ids = new Map<string, string>()
   const renew = (bulletin: Packet) => {
     const old = field(bulletin, key)
-    if (!ids.has(old)) ids.set(old, `UI-BULLETIN-${crypto.randomUUID()}`)
+    if (!ids.has(old)) ids.set(old, `UI-BULLETIN-${createUuid()}`)
     bulletin[key] = ids.get(old)
   }
-  packet.PlaylistID = `UI-PLAYLIST-${crypto.randomUUID()}`
+  packet.PlaylistID = `UI-PLAYLIST-${createUuid()}`
   if (packet[key] !== undefined) renew(packet)
   else {
     for (const name of ['Bulletins', 'DailyBulletins']) {

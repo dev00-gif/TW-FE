@@ -1,3 +1,4 @@
+import { createUuid } from '@/utils/uuid'
 import { useState } from 'react'
 import { Link, useSearch } from '@tanstack/react-router'
 import {
@@ -361,7 +362,7 @@ export function ServicesPage() {
       const result = await informationSourceService.execute(
         code,
         packet,
-        code === 'DV001' ? undefined : crypto.randomUUID(),
+        code === 'DV001' ? undefined : createUuid(),
       )
       setResponse(result)
       if (createsBulletins(code)) {
@@ -659,7 +660,7 @@ export function SchedulesPage() {
           PlaylistName: item.payload.PlaylistName ?? 'Lịch khẩn cấp',
           RecipientAreas: item.payload.RecipientAreas,
         },
-        crypto.randomUUID(),
+        createUuid(),
       )
       toast.success('Đã gửi yêu cầu hủy; chờ nhật ký xác nhận từ thiết bị')
       await refresh()

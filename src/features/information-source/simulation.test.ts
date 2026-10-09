@@ -1,4 +1,4 @@
-import { beforeEach, describe, expect, it, vi } from 'vitest'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { simulateConnection } from './simulation'
 import { informationSourceService } from './service'
 import type { Packet, ServiceCode, ServiceDefinition } from './types'
@@ -6,6 +6,9 @@ import examples from './test-data/appendix-examples.json'
 
 vi.mock('./service', () => ({ informationSourceService: { execute: vi.fn() } }))
 const execute = vi.mocked(informationSourceService.execute)
+const getRandomValues = globalThis.crypto.getRandomValues.bind(
+  globalThis.crypto,
+)
 const definitions: ServiceDefinition[] = Object.entries(examples).map(
   ([code, example]) => ({
     code: code as ServiceCode,
@@ -28,6 +31,31 @@ const accepted = (Content: unknown) => ({
 
 describe('device round trip simulation', () => {
   beforeEach(() => vi.clearAllMocks())
+  afterEach(() => vi.unstubAllGlobals())
+
+  it.each(['radio', 'signage'] as const)(
+    'completes the %s simulation on HTTP without crypto.randomUUID',
+    async (channel) => {
+      vi.stubGlobal('crypto', { getRandomValues })
+      let schedule: Packet = {}
+      execute.mockImplementation(async (code: ServiceCode, packet: Packet) => {
+        if (code === 'DV002' || code === 'DV010')
+          schedule = structuredClone(packet)
+        return accepted(code === 'DV019' || code === 'DV020' ? schedule : {})
+      })
+
+      const steps = await simulateConnection(definitions, channel, () => {})
+      expect(steps).toHaveLength(6)
+      expect(steps.every((step) => step.state === 'success')).toBe(true)
+      const requestIds = execute.mock.calls.map(([, , requestId]) => requestId)
+      expect(new Set(requestIds).size).toBe(6)
+      requestIds.forEach((id) =>
+        expect(id).toMatch(
+          /^simulation-[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/,
+        ),
+      )
+    },
+  )
 
   it.each(['radio', 'signage'] as const)(
     'reports the bulletin received from the backend for %s',

@@ -1,3 +1,4 @@
+import { createUuid } from '@/utils/uuid'
 import { useState } from 'react'
 import { Link, useSearch } from '@tanstack/react-router'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
@@ -660,7 +661,7 @@ function RunConfiguration({
                 await informationSourceService.execute(
                   row.serviceCode,
                   parse(request),
-                  row.serviceCode === 'DV001' ? undefined : crypto.randomUUID(),
+                  row.serviceCode === 'DV001' ? undefined : createUuid(),
                 ),
               )
               await saved()
@@ -957,7 +958,7 @@ function BusinessEditor({
     const value = structuredClone(
       catalog.find((item) => item.code === code)!.example,
     )
-    const freshId = `UI-${crypto.randomUUID()}`
+    const freshId = `UI-${createUuid()}`
     if (kind === 'devices') {
       value[deviceKey(channel)] = freshId
       value.DeviceName = 'Thiết bị mới'

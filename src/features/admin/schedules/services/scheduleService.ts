@@ -1,3 +1,4 @@
+import { createUuid } from '@/utils/uuid'
 import {
   canAccessTerritory,
   assertTerritory,
@@ -290,7 +291,7 @@ export const scheduleService = {
     ),
   create: async (input: ScheduleInput, access?: TerritoryAccess) => {
     if (access) assertTerritory(access, input)
-    const created = { ...input, id: crypto.randomUUID() }
+    const created = { ...input, id: createUuid() }
     items = [created, ...items]
     return created
   },
@@ -320,7 +321,7 @@ export const scheduleService = {
     if (access) for (const input of inputs) assertTerritory(access, input)
     const created = inputs.map((input) => ({
       ...input,
-      id: crypto.randomUUID(),
+      id: createUuid(),
     }))
     items = [...created, ...items]
     return created.length

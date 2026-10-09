@@ -1,3 +1,4 @@
+import { createUuid } from '@/utils/uuid'
 import { slugify } from '@/utils/utils'
 import type { BulletinCategory } from '../types'
 import { bulletinService } from './bulletinService'
@@ -97,7 +98,7 @@ export const bulletinCategoryService = {
         null
     }
     const category: BulletinCategory = {
-      id: input.id ?? crypto.randomUUID(),
+      id: input.id ?? createUuid(),
       name,
       slug,
       description: input.description.trim(),

@@ -1,3 +1,4 @@
+import { createUuid } from '@/utils/uuid'
 import { informationSourceService } from './service'
 import { asPacket, asPackets, bulletinKey, deviceKey, field } from './types'
 import type {
@@ -37,7 +38,7 @@ export async function simulateConnection(
       step.response = await informationSourceService.execute(
         code,
         payload,
-        `simulation-${crypto.randomUUID()}`,
+        `simulation-${createUuid()}`,
       )
       step.state = 'success'
       observe([...steps])
@@ -52,8 +53,7 @@ export async function simulateConnection(
   const digital = channel === 'signage'
   const dk = deviceKey(channel)
   const externalId =
-    device?.externalId ??
-    `SIM-${digital ? 'SIGNAGE' : 'RADIO'}-${crypto.randomUUID()}`
+    device?.externalId ?? `SIM-${digital ? 'SIGNAGE' : 'RADIO'}-${createUuid()}`
   const areaCode = device?.areaCode ?? 'H53.102'
   const areaName = device?.areaName ?? 'Phường Bình Minh'
   const deviceName =
@@ -73,12 +73,12 @@ export async function simulateConnection(
   await send(digital ? 'DV016' : 'DV008', status, 'Thiết bị gửi trạng thái')
   await send('DV018', { [dk]: externalId }, 'Đăng ký các topic MQTT giả lập')
   const schedule = sample(digital ? 'DV010' : 'DV002')
-  const scheduleId = `SIM-${crypto.randomUUID()}`
+  const scheduleId = `SIM-${createUuid()}`
   const original = asPackets(schedule.Bulletins).at(0)
   if (!original) throw new Error('Thiếu bản tin trong mẫu lịch phát')
   const bulletin = {
     ...original,
-    [bulletinKey(channel)]: `SIM-BULLETIN-${crypto.randomUUID()}`,
+    [bulletinKey(channel)]: `SIM-BULLETIN-${createUuid()}`,
     Title: `Bản tin ${digital ? 'điện tử' : 'phát thanh'} mô phỏng lúc ${new Date().toLocaleTimeString('vi-VN')}`,
     ProducedAt: now,
     BroadcastDays: [
