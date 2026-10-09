@@ -1,0 +1,951 @@
+{
+  "DV001": {
+    "Username": "root@gmail.com",
+    "Password": ""
+  },
+  "DV002": {
+    "SourceID": "H53",
+    "SourceName": "Tỉnh Tây Ninh",
+    "DestinationID": "H53.102",
+    "DestinationName": "Phường Bình Minh",
+    "RecipientAreas": [
+      {
+        "DestinationID": "H53.102",
+        "DestinationName": "Phường Bình Minh",
+        "SpeakerClusterID": [
+          "88171961786836742"
+        ]
+      }
+    ],
+    "PlaylistID": "3abbc26e-ccf7-4311-8200-bd40231eebac",
+    "PlaylistName": "Phường Bình Minh 25/02/2026",
+    "Bulletins": [
+      {
+        "BulletinID": "35305",
+        "BulletinType": "5",
+        "Priority": "3",
+        "Title": "Tiếp Sóng Truyền Thanh Đài Tỉnh Tây Ninh",
+        "CategoryType": "1",
+        "Summary": "Tiếp Sóng Truyền Thanh Đài Tỉnh Tây Ninh",
+        "ProducedAt": 1770000892,
+        "Duration": "00:30:00",
+        "Author": {
+          "FullName": "Cán bộ tỉnh",
+          "PenName": "canbotinh",
+          "Email": "canbotinh@tayninh.gov.vn"
+        },
+        "Content": "https://hubip-ttn.tayninh.gov.vn/live/tayninh.stream/playlist.m3u8",
+        "CreatedAreaID": "H53.102",
+        "CreatedAreaName": "Phường Bình Minh",
+        "BulletinDetails": [
+          {
+            "Name": "Nguồn tin",
+            "Value": "H53 "
+          }
+        ],
+        "NewsSource": "H53",
+        "Relay": 0,
+        "RelaySource": "H53",
+        "BroadcastDays": [
+          {
+            "BroadcastDate": 1772038800,
+            "BroadcastWindows": [
+              {
+                "StartTime": 1772058600,
+                "EndTime": 1772060400
+              }
+            ]
+          },
+          {
+            "BroadcastDate": 1772125200,
+            "BroadcastWindows": [
+              {
+                "StartTime": 1772145000,
+                "EndTime": 1772146800
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "BulletinID": "27491",
+        "BulletinType": "5",
+        "Priority": "3",
+        "Title": "Tiếp sóng đài VOV",
+        "CategoryType": "1",
+        "Summary": "Tiếp sóng đài VOV",
+        "ProducedAt": 1765265575,
+        "Duration": "00:30:00",
+        "Author": {
+          "FullName": "Cán bộ tỉnh",
+          "PenName": "canbotinh",
+          "Email": "canbotinh@tayninh.gov.vn"
+        },
+        "Content": "https://luuchieu.truyenhinhso.vn/media/live/37884/index.m3u8",
+        "CreatedAreaID": "H53.102",
+        "CreatedAreaName": "Phường Bình Minh",
+        "BulletinDetails": [
+          {
+            "Name": "Nguồn tin",
+            "Value": "H53.185"
+          }
+        ],
+        "NewsSource": "H53",
+        "Relay": 0,
+        "RelaySource": "H53",
+        "BroadcastDays": [
+          {
+            "BroadcastDate": 1772038800,
+            "BroadcastWindows": [
+              {
+                "StartTime": 1772060400,
+                "EndTime": 1772062200
+              }
+            ]
+          },
+          {
+            "BroadcastDate": 1772125200,
+            "BroadcastWindows": [
+              {
+                "StartTime": 1772146800,
+                "EndTime": 1772148600
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "DailyBulletins": [
+      {
+        "BulletinID": "38494",
+        "BulletinType": "3",
+        "Priority": "3",
+        "Title": "THỜI SỰ 26,27/02/2026",
+        "CategoryType": "1",
+        "Summary": "THỜI SỰ 26,27/02/2026",
+        "ProducedAt": 1772017910,
+        "Duration": "00:16:08",
+        "Author": {
+          "FullName": "Cán bộ phường Bình Minh",
+          "PenName": "cbvhxbinhminh",
+          "Email": "cbvhxbinhminh@tayninh.gov.vn"
+        },
+        "Content": "https://storage-ttn.tayninh.gov.vn/2026/2/25/18/453368439_ctts_so-37_26.2-va-27.2.2026.mp3",
+        "CreatedAreaID": "H53.102",
+        "CreatedAreaName": "Phường Bình Minh",
+        "BulletinDetails": [
+          {
+            "Name": "Nguồn tin",
+            "Value": "H53.102"
+          }
+        ],
+        "NewsSource": "H53.102",
+        "Relay": 1,
+        "RelaySource": "",
+        "BroadcastStartDate": 1772409600,
+        "BroadcastEndDate": 1772928000,
+        "BroadcastWindows": [
+          {
+            "StartTime": 1772434800,
+            "EndTime": 1772435768
+          },
+          {
+            "StartTime": 1772470800,
+            "EndTime": 1772471768
+          }
+        ]
+      }
+    ]
+  },
+  "DV003": {
+    "SourceID": "H18",
+    "SourceName": "Tỉnh Điện Biên",
+    "RecipientAreas": [
+      {
+        "DestinationID": "H18.101",
+        "DestinationName": "Xã Mường Nhé",
+        "SpeakerClusterID": [
+          "869012345678903"
+        ]
+      }
+    ],
+    "PlaylistID": "3abbc26e-ccf7-4311-8200-bd40231eebac",
+    "BulletinID": "1bddcece-c4de-4f62-978d-4419b6c46c8b",
+    "BulletinType": "3",
+    "Priority": "1",
+    "Title": "Phải giải quyết được các áp lực, gánh nặng hành chính đối với giáoviên",
+    "CategoryType": "3",
+    "Summary": "Bản tin phản ánh yêu cầu cần giải quyết áp lực và gánhnặng hành chính đối với đội ngũ giáo viên.",
+    "ProducedAt": 1771927574,
+    "Duration": "00:03:12",
+    "Author": {
+      "FullName": "Phan Mạnh Hùng",
+      "PenName": "pmhung",
+      "Email": "pmhung@vietnam.vn"
+    },
+    "Content": "https://storage.dienbien.gov.vn/Download/de624e1d-fc56-4a85-8a8b-3597b92c7fda.mp3",
+    "CreatedAreaID": "H18",
+    "CreatedAreaName": "Tỉnh Điện Biên",
+    "BulletinDetails": [
+      {
+        "Name": "Tác giả",
+        "Value": "Phan Mạnh Hùng"
+      },
+      {
+        "Name": "Giải thưởng",
+        "Value": "Hạng A"
+      }
+    ],
+    "NewsSource": "G16.94"
+  },
+  "DV004": {
+    "SourceID": "H18",
+    "SourceName": "Tỉnh Điện Biên",
+    "PlaylistID": "3abbc26e-ccf7-4311-8200-bd40231eebac",
+    "PlaylistName": "Lịch phát hàng ngày",
+    "RecipientAreas": [
+      {
+        "DestinationID": "H18.101",
+        "DestinationName": "Xã Mường Nhé"
+      }
+    ]
+  },
+  "DV005": {
+    "SourceID": "H53.185",
+    "SourceName": "Xã Tân Tập",
+    "DestinationID": "H53",
+    "DestinationName": "Tỉnh Tây Ninh",
+    "SpeakerClusterID": "e4:5f:01:d9:db:35",
+    "DeviceName": "CGC-TANTAP-APTANHOA-Chú Út Nơi",
+    "ProviderCode": "vtc",
+    "ProviderName": "VTC Digital",
+    "BulletinID": "32717",
+    "BulletinType": "3",
+    "Priority": "3",
+    "Title": "TUYÊN TRUYỀN PHÒNG CHỐNG CHÁY NỔ-PHÁO NỔ",
+    "CategoryType": "1",
+    "Summary": "TUYÊN TRUYỀN PHÒNG CHỐNG CHÁY NỔ-PHÁONỔ",
+    "ProducedAt": 1768445644,
+    "Duration": "00:06:32",
+    "Author": {
+      "FullName": "Cán bộ xã Tân Tập",
+      "PenName": "cbvhxtantap",
+      "Email": "cbvhxtantap@tayninh.gov.vn"
+    },
+    "StartedAt": 1770329100,
+    "Relay": 1,
+    "RelaySource": "",
+    "Content": "https://storage-ttn.tayninh.gov.vn/2026/1/15/9/245442469_tuyen-truyen-phao-no.mp3",
+    "BulletinDetails": [
+      {
+        "Name": "Nguồn tin",
+        "Value": "H53.185"
+      }
+    ],
+    "NewsSource": "H53.185",
+    "Volume": "100",
+    "Power": "1"
+  },
+  "DV006": {
+    "SourceID": "H53.102",
+    "SourceName": "Phường Bình Minh",
+    "DestinationID": "H53",
+    "DestinationName": "Tỉnh Tây Ninh",
+    "Areas": [
+      {
+        "DestinationID": "H53.102",
+        "DestinationName": "Phường Bình Minh"
+      }
+    ],
+    "Devices": [
+      {
+        "SpeakerClusterID": "88171961786836742",
+        "DeviceName": "Ấp Bình Trung (Cổng Chính)",
+        "ProviderCode": "vtc",
+        "ProviderName": "VTC Digital"
+      }
+    ],
+    "PlaylistID": "3abbc26e-ccf7-4311-8200-bd40231eebac",
+    "PlaylistName": "Phường Bình Minh 25/02/2026",
+    "Bulletins": [
+      {
+        "BulletinID": "35305",
+        "BulletinType": "5",
+        "Priority": "3",
+        "Title": "Tiếp Sóng Truyền Thanh Đài Tỉnh Tây Ninh",
+        "CategoryType": "1",
+        "Summary": "Tiếp Sóng Truyền Thanh Đài Tỉnh Tây Ninh",
+        "ProducedAt": 1770000892,
+        "Duration": "00:30:00",
+        "Author": {
+          "FullName": "Cán bộ tỉnh",
+          "PenName": "canbotinh",
+          "Email": "canbotinh@tayninh.gov.vn"
+        },
+        "Content": "https://hubip-ttn.tayninh.gov.vn/live/tayninh.stream/playlist.m3u8",
+        "CreatedAreaID": "H53.102",
+        "CreatedAreaName": "Phường Bình Minh",
+        "BulletinDetails": [
+          {
+            "Name": "Nguồn tin",
+            "Value": "H53"
+          }
+        ],
+        "NewsSource": "H53",
+        "Relay": 0,
+        "RelaySource": "H53",
+        "BroadcastDays": [
+          {
+            "BroadcastDate": 1772038800,
+            "BroadcastWindows": [
+              {
+                "StartTime": 1772058600,
+                "EndTime": 1772060400
+              }
+            ]
+          },
+          {
+            "BroadcastDate": 1772125200,
+            "BroadcastWindows": [
+              {
+                "StartTime": 1772145000,
+                "EndTime": 1772146800
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "BulletinID": "27491",
+        "BulletinType": "5",
+        "Priority": "3",
+        "Title": "Tiếp sóng đài VOV",
+        "CategoryType": "1",
+        "Summary": "Tiếp sóng đài VOV",
+        "ProducedAt": 1765265575,
+        "Duration": "00:30:00",
+        "Author": {
+          "FullName": "Cán bộ tỉnh",
+          "PenName": "canbotinh",
+          "Email": "canbotinh@tayninh.gov.vn"
+        },
+        "Content": "https://luuchieu.truyenhinhso.vn/media/live/37C884/index.m3u8",
+        "CreatedAreaID": "H53.102",
+        "CreatedAreaName": "Phường Bình Minh",
+        "BulletinDetails": [
+          {
+            "Name": "Nguồn tin",
+            "Value": "H53"
+          }
+        ],
+        "NewsSource": "H53",
+        "Relay": 0,
+        "RelaySource": "H53",
+        "BroadcastDays": [
+          {
+            "BroadcastDate": 1772038800,
+            "BroadcastWindows": [
+              {
+                "StartTime": 1772060400,
+                "EndTime": 1772062200
+              }
+            ]
+          },
+          {
+            "BroadcastDate": 1772125200,
+            "BroadcastWindows": [
+              {
+                "StartTime": 1772146800,
+                "EndTime": 1772148600
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "DailyBulletins": [
+      {
+        "BulletinID": "38494",
+        "BulletinType": "3",
+        "Priority": "3",
+        "Title": "THỜI SỰ 26,27/02/2026",
+        "CategoryType": "1",
+        "Summary": "THỜI SỰ 26,27/02/2026",
+        "ProducedAt": 1772017910,
+        "Duration": "00:16:08",
+        "Author": {
+          "FullName": "Cán bộ phường Bình Minh",
+          "PenName": "cbvhxbinhminh",
+          "Email": "cbvhxbinhminh@tayninh.gov.vn"
+        },
+        "Content": "https://storage-ttn.tayninh.gov.vn/2026/2/25/18/453368439_ctts_so-37_26.2-va-27.2.2026.mp3",
+        "CreatedAreaID": "H53.102",
+        "CreatedAreaName": "Phường Bình Minh",
+        "BulletinDetails": [
+          {
+            "Name": "Nguồn tin",
+            "Value": "H53.102"
+          }
+        ],
+        "NewsSource": "H53.102",
+        "Relay": 1,
+        "RelaySource": "",
+        "BroadcastStartDate": 1772409600,
+        "BroadcastEndDate": 1772928000,
+        "BroadcastWindows": [
+          {
+            "StartTime": 1772434800,
+            "EndTime": 1772435768
+          },
+          {
+            "StartTime": 1772470800,
+            "EndTime": 1772471768
+          }
+        ]
+      }
+    ]
+  },
+  "DV007": {
+    "SourceID": "H53.102",
+    "SourceName": "Phường Bình Minh",
+    "DestinationID": "H53",
+    "DestinationName": "Tỉnh Tây Ninh",
+    "Devices": [
+      {
+        "SpeakerClusterID": "88171961786836742",
+        "DeviceName": "Ấp Bình Trung (Cổng Chính)",
+        "ProviderCode": "vtc",
+        "ProviderName": "VTC Digital"
+      }
+    ],
+    "PlaylistID": "3abbc26e-ccf7-4311-8200-bd40231eebac",
+    "PlaylistName": "Phường Bình Minh 25/02/2026"
+  },
+  "DV008": {
+    "SourceID": "H53.139",
+    "SourceName": "Xã Tân Hưng",
+    "DestinationID": "H53",
+    "DestinationName": "Tỉnh Tây Ninh",
+    "SpeakerClusterID": "861245069399789",
+    "DeviceName": "Cụm 2 - Gần cầu Kênh 79 (5942) - thị trấn Tân Hưng cũ",
+    "DeviceTypeName": "Cụm thu phát thanh",
+    "ProviderCode": "vtc",
+    "ProviderName": "VTC Digital",
+    "ManufacturerCode": "vtc",
+    "ManufacturerName": "VTC Digital",
+    "Volume": "80",
+    "OperatingStatus": "0",
+    "ConnectionStatus": "4G, -10dbm",
+    "Latitude": 10.591208,
+    "Longitude": 106.654366,
+    "DeviceInfo": {
+      "Power": "1",
+      "Temperature": "45",
+      "StorageUsed": "104000"
+    },
+    "StartedAt": 1772428799,
+    "PlaybackContent": "https://hubip-ttn.tayninh.gov.vn/live/tayninh.stream/playlist.m3u8",
+    "AppVersion": "1.0.0"
+  },
+  "DV009": {
+    "SourceID": "H53",
+    "SourceName": "Tỉnh Tây Ninh",
+    "RecipientAreas": [
+      {
+        "DestinationID": "H53.139",
+        "DestinationName": "Xã Tân Hưng"
+      }
+    ],
+    "Devices": {
+      "SpeakerClusterID": [
+        "861245069399789",
+        "861245069399790"
+      ]
+    },
+    "DeviceControl": {
+      "CommandCode": "2",
+      "Parameter": "0"
+    }
+  },
+  "DV010": {
+    "SourceID": "H53",
+    "SourceName": "Tỉnh Tây Ninh",
+    "DestinationID": "H53.102",
+    "DestinationName": "Phường Bình Minh",
+    "RecipientAreas": [
+      {
+        "DestinationID": "H53.102",
+        "DestinationName": "Phường Bình Minh",
+        "DigitalSignageID": [
+          "54:78:C9:B8:48:C8"
+        ]
+      }
+    ],
+    "ScreenPartition": "0",
+    "PlaylistID": "3abbc26e-ccf7-4311-8200-bd40231eebac",
+    "PlaylistName": "Phường Bình Minh 25/02/2026",
+    "Bulletins": [
+      {
+        "BroadcastZone": "0",
+        "PublicBulletinID": "35305",
+        "BulletinType": "4",
+        "Priority": "3",
+        "Title": "Chương trình thời sự đài Tỉnh Tây Ninh",
+        "CategoryType": "1",
+        "Summary": "Chương trình thời sự đài Tỉnh Tây Ninh",
+        "ProducedAt": 1770000892,
+        "Duration": "00:30:00",
+        "Author": {
+          "FullName": "Cán bộ tỉnh",
+          "PenName": "canbotinh",
+          "Email": "canbotinh@tayninh.gov.vn"
+        },
+        "Content": "https://storage-ttn.tayninh.gov.vn/2026/2/2/17/4k_uhd_60pfs_22mbs.mp4",
+        "CreatedAreaID": "H53.102",
+        "CreatedAreaName": "Phường Bình Minh",
+        "BulletinDetails": [
+          {
+            "Name": "Nguồn tin",
+            "Value": "H53"
+          }
+        ],
+        "NewsSource": "H53",
+        "BroadcastDays": [
+          {
+            "BroadcastDate": 1772038800,
+            "BroadcastWindows": [
+              {
+                "StartTime": 1772058600,
+                "EndTime": 1772060400
+              }
+            ]
+          },
+          {
+            "BroadcastDate": 1772125200,
+            "BroadcastWindows": [
+              {
+                "StartTime": 1772145000,
+                "EndTime": 1772146800
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "BroadcastZone": "0",
+        "PublicBulletinID": "27491",
+        "BulletinType": "5",
+        "Priority": "3",
+        "Title": "Tiếp Sóng Truyền Hình Đài Tỉnh Tây Ninh",
+        "CategoryType": "1",
+        "Summary": "Tiếp Sóng Truyền Hình Đài Tỉnh Tây Ninh",
+        "ProducedAt": 1765265575,
+        "Duration": "00:30:00",
+        "Author": {
+          "FullName": "Cán bộ tỉnh",
+          "PenName": "canbotinh",
+          "Email": "canbotinh@tayninh.gov.vn"
+        },
+        "Content": "http://luuchieu.tayninh.gov.vn/media/live/370CC0DC3538884/index.m3u8",
+        "CreatedAreaID": "H53.102",
+        "CreatedAreaName": "Phường Bình Minh",
+        "BulletinDetails": [
+          {
+            "Name": "Nguồn tin",
+            "Value": "H53"
+          }
+        ],
+        "NewsSource": "H53",
+        "BroadcastDays": [
+          {
+            "BroadcastDate": 1772038800,
+            "BroadcastWindows": [
+              {
+                "StartTime": 1772060400,
+                "EndTime": 1772062200
+              }
+            ]
+          },
+          {
+            "BroadcastDate": 1772125200,
+            "BroadcastWindows": [
+              {
+                "StartTime": 1772146800,
+                "EndTime": 1772148600
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "DailyBulletins": [
+      {
+        "BroadcastZone": "0",
+        "PublicBulletinID": "38494",
+        "BulletinType": "4",
+        "Priority": "3",
+        "Title": "Tuyên truyền ý thức khi tham gia giao thông",
+        "CategoryType": "1",
+        "Summary": "Tuyên truyền ý thức khi tham gia giao thông",
+        "ProducedAt": 1772017910,
+        "Duration": "00:16:08",
+        "Author": {
+          "FullName": "Cán bộ phường Bình Minh",
+          "PenName": "cbvhxbinhminh",
+          "Email": "cbvhxbinhminh@tayninh.gov.vn"
+        },
+        "Content": "https://storage-ttn.tayninh.gov.vn/2026/2/25/18/tuyen_truyen.mp4",
+        "CreatedAreaID": "H53.102",
+        "CreatedAreaName": "Phường Bình Minh",
+        "BulletinDetails": [
+          {
+            "Name": "Nguồn tin",
+            "Value": "H53.102"
+          }
+        ],
+        "NewsSource": "H53.102",
+        "BroadcastStartDate": 1772409600,
+        "BroadcastEndDate": 1772928000,
+        "BroadcastWindows": [
+          {
+            "StartTime": 1772434800,
+            "EndTime": 1772435768
+          },
+          {
+            "StartTime": 1772470800,
+            "EndTime": 1772471768
+          }
+        ]
+      }
+    ]
+  },
+  "DV011": {
+    "SourceID": "H53",
+    "SourceName": "Tỉnh Tây Ninh",
+    "RecipientAreas": [
+      {
+        "DestinationID": "H53.102",
+        "DestinationName": "Phường Bình Minh",
+        "DigitalSignageID": [
+          "54:78:C9:B8:48:C8"
+        ]
+      }
+    ],
+    "ScreenPartition": 0,
+    "PlaylistID": "3abbc26e-ccf7-4311-8200-bd40231eebac",
+    "Bulletins": [
+      {
+        "BroadcastZone": "0",
+        "PublicBulletinID": "35305",
+        "BulletinType": "4",
+        "Priority": "1",
+        "Title": "Thông báo khẩn về tình hình thời tiết",
+        "CategoryType": "2",
+        "Summary": "Cảnh báo mưa lớn, gió mạnh trên địa bàn tỉnh.",
+        "ProducedAt": 1770000892,
+        "Author": {
+          "FullName": "Ban Biên tập Đài Tỉnh",
+          "PenName": "bientaptinh",
+          "Email": "bientap@tayninh.gov.vn"
+        },
+        "Content": "https://storage-ttn.tayninh.gov.vn/2026/2/2/canhbao_thoitiet.mp4",
+        "CreatedAreaID": "H53",
+        "CreatedAreaName": "Tỉnh Tây Ninh",
+        "NewsSource": "H53",
+        "BulletinDetails": [
+          {
+            "Name": "Nguồn tin",
+            "Value": "H53"
+          }
+        ],
+        "Duration": "00:05:00"
+      }
+    ]
+  },
+  "DV012": {
+    "SourceID": "H53",
+    "SourceName": "Tỉnh Tây Ninh",
+    "PlaylistID": "3abbc26e-ccf7-4311-8200-bd40231eebac",
+    "PlaylistName": "Lịch phát Phường Bình Minh 25/02/2026",
+    "RecipientAreas": [
+      {
+        "DestinationID": "H53.102",
+        "DestinationName": "Phường Bình Minh"
+      }
+    ]
+  },
+  "DV013": {
+    "SourceID": "H53.102",
+    "SourceName": "Phường Bình Minh",
+    "DestinationID": "H53",
+    "DestinationName": "Tỉnh Tây Ninh",
+    "DigitalSignageID": "54:78:C9:B8:48:C8",
+    "DeviceName": "Bảng điện tử Phường Bình Minh",
+    "ProviderCode": "vtc",
+    "ProviderName": "VTC Digital",
+    "BroadcastZone": "0",
+    "PublicBulletinID": "40001",
+    "BulletinType": "4",
+    "Priority": "2",
+    "Title": "Thông báo điều chỉnh giao thông khu vực trung tâm",
+    "CategoryType": "1",
+    "Summary": "Điều chỉnh luồng giao thông tại khu vực trung tâm thành phố từngày 01/03/2026.",
+    "ProducedAt": 1772500000,
+    "Duration": "00:10:00",
+    "Author": {
+      "FullName": "Ban Biên tập Phường Bình Minh",
+      "PenName": "bientapphuong",
+      "Email": "bientap@binhminh.gov.vn"
+    },
+    "StartedAt": 1772503600,
+    "Content": [
+      "https://storage-binhminh.tayninh.gov.vn/2026/3/1/dieuchinh_giaothong.mp4"
+    ],
+    "BulletinDetails": [
+      {
+        "Name": "Nguồn tin",
+        "Value": "H53.102"
+      }
+    ],
+    "NewsSource": "H53.102"
+  },
+  "DV014": {
+    "SourceID": "H53.102",
+    "SourceName": "Phường Bình Minh",
+    "DestinationID": "H53",
+    "DestinationName": "Tỉnh Tây Ninh",
+    "Areas": [
+      {
+        "DestinationID": "H53.102",
+        "DestinationName": "Phường Bình Minh"
+      }
+    ],
+    "Devices": [
+      {
+        "DigitalSignageID": "54:78:C9:B8:48:C8",
+        "DeviceName": "Bảng điện tử Phường Bình Minh",
+        "ProviderCode": "vtc",
+        "ProviderName": "VTC Digital"
+      }
+    ],
+    "ScreenPartition": "0",
+    "PlaylistID": "3abbc26e-ccf7-4311-8200-bd40231eebac",
+    "PlaylistName": "Phường Bình Minh 25/02/2026",
+    "Bulletins": [
+      {
+        "BroadcastZone": "0",
+        "PublicBulletinID": "35305",
+        "BulletinType": "4",
+        "Priority": "3",
+        "Title": "Chương trình thời sự đài Tỉnh Tây Ninh",
+        "CategoryType": "1",
+        "Summary": "Chương trình thời sự đài Tỉnh Tây Ninh",
+        "ProducedAt": 1770000892,
+        "Duration": "00:30:00",
+        "Author": {
+          "FullName": "Cán bộ tỉnh",
+          "PenName": "canbotinh",
+          "Email": "canbotinh@tayninh.gov.vn"
+        },
+        "Content": [
+          "https://storage-ttn.tayninh.gov.vn/2026/2/2/17/4k_uhd_60pfs_22mbs.mp4"
+        ],
+        "CreatedAreaID": "H53.102",
+        "CreatedAreaName": "Phường Bình Minh",
+        "BulletinDetails": [
+          {
+            "Name": "Nguồn tin",
+            "Value": "H53"
+          }
+        ],
+        "NewsSource": "H53",
+        "BroadcastDays": [
+          {
+            "BroadcastDate": 1772038800,
+            "BroadcastWindows": [
+              {
+                "StartTime": 1772058600,
+                "EndTime": 1772060400
+              }
+            ]
+          },
+          {
+            "BroadcastDate": 1772125200,
+            "BroadcastWindows": [
+              {
+                "StartTime": 1772145000,
+                "EndTime": 1772146800
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "BroadcastZone": "0",
+        "PublicBulletinID": "27491",
+        "BulletinType": "5",
+        "Priority": "3",
+        "Title": "Tiếp Sóng Truyền Hình Đài Tỉnh Tây Ninh",
+        "CategoryType": "1",
+        "Summary": "Tiếp Sóng Truyền Hình Đài Tỉnh Tây Ninh",
+        "ProducedAt": 1765265575,
+        "Duration": "00:30:00",
+        "Author": {
+          "FullName": "Cán bộ tỉnh",
+          "PenName": "canbotinh",
+          "Email": "canbotinh@tayninh.gov.vn"
+        },
+        "Content": [
+          "http://luuchieu.tayninh.gov.vn/media/live/370CC0DC3538884/index.m3u8"
+        ],
+        "CreatedAreaID": "H53.102",
+        "CreatedAreaName": "Phường Bình Minh",
+        "BulletinDetails": [
+          {
+            "Name": "Nguồn tin",
+            "Value": "H53"
+          }
+        ],
+        "NewsSource": "H53",
+        "BroadcastDays": [
+          {
+            "BroadcastDate": 1772038800,
+            "BroadcastWindows": [
+              {
+                "StartTime": 1772060400,
+                "EndTime": 1772062200
+              }
+            ]
+          },
+          {
+            "BroadcastDate": 1772125200,
+            "BroadcastWindows": [
+              {
+                "StartTime": 1772146800,
+                "EndTime": 1772148600
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "DailyBulletins": [
+      {
+        "BroadcastZone": "0",
+        "PublicBulletinID": "38494",
+        "BulletinType": "4",
+        "Priority": "3",
+        "Title": "Tuyên truyền ý thức khi tham gia giao thông",
+        "CategoryType": "1",
+        "Summary": "Tuyên truyền ý thức khi tham gia giao thông",
+        "ProducedAt": 1772017910,
+        "Duration": "00:16:08",
+        "Author": {
+          "FullName": "Cán bộ phường Bình Minh",
+          "PenName": "cbvhxbinhminh",
+          "Email": "cbvhxbinhminh@tayninh.gov.vn"
+        },
+        "Content": "https://storage-ttn.tayninh.gov.vn/2026/2/25/18/tuyen_truyen.mp4",
+        "CreatedAreaID": "H53.102",
+        "CreatedAreaName": "Phường Bình Minh",
+        "BulletinDetails": [
+          {
+            "Name": "Nguồn tin",
+            "Value": "H53.102"
+          }
+        ],
+        "NewsSource": "H53.102",
+        "BroadcastStartDate": 1772409600,
+        "BroadcastEndDate": 1772928000,
+        "BroadcastWindows": [
+          {
+            "StartTime": 1772434800,
+            "EndTime": 1772435768
+          },
+          {
+            "StartTime": 1772470800,
+            "EndTime": 1772471768
+          }
+        ]
+      }
+    ]
+  },
+  "DV015": {
+    "SourceID": "H53.102",
+    "SourceName": "Phường Bình Minh",
+    "DestinationID": "H53",
+    "DestinationName": "Tỉnh Tây Ninh",
+    "Devices": [
+      {
+        "DigitalSignageID": "00:1A:2B:3C:4D:5E",
+        "DeviceName": "Bảng điện tử Trung tâm Phường Bình Minh",
+        "ProviderCode": "vtc",
+        "ProviderName": "VTC Digital"
+      },
+      {
+        "DigitalSignageID": "A4:CF:12:9B:88:01",
+        "DeviceName": "Bảng điện tử Khu phố 1",
+        "ProviderCode": "vtc",
+        "ProviderName": "VTC Digital"
+      }
+    ],
+    "PlaylistID": "9c2a7b4e-ff12-4a11-8c90-7bd50231eeaa",
+    "PlaylistName": "Lịch phát ngày 05/03/2026"
+  },
+  "DV016": {
+    "SourceID": "H53.102",
+    "SourceName": "Phường Bình Minh",
+    "DestinationID": "H53",
+    "DestinationName": "Tỉnh Tây Ninh",
+    "DigitalSignageID": "54:78:C9:B8:48:C8",
+    "DeviceName": "Bảng điện tử Trung tâm Phường Bình Minh",
+    "DeviceTypeName": "Bảng tin điện tử",
+    "ProviderCode": "vtc",
+    "ProviderName": "VTC Digital",
+    "ManufacturerCode": "vtc",
+    "ManufacturerName": "VTC Digital",
+    "Status": "1",
+    "ConnectionStatus": "4G, -10dbm",
+    "Latitude": 11.31004,
+    "Longitude": 106.09852,
+    "DeviceInfo": {
+      "Temperature": "45",
+      "StorageUsed": "104000"
+    },
+    "StartedAt": 1772668800,
+    "PlaybackContent": [
+      "https://storage-ttn.tayninh.gov.vn/2026/3/3/thoisu.mp4"
+    ],
+    "AppVersion": "1.2.5"
+  },
+  "DV017": {
+    "SourceID": "H53",
+    "SourceName": "Tỉnh Tây Ninh",
+    "RecipientAreas": [
+      {
+        "DestinationID": "H53.102",
+        "DestinationName": "Phường Bình Minh"
+      }
+    ],
+    "Devices": {
+      "DigitalSignageID": [
+        "54:78:C9:B8:48:C8"
+      ]
+    },
+    "DeviceControl": {
+      "CommandCode": "2",
+      "Parameter": "0"
+    }
+  },
+  "DV018": {
+    "SpeakerClusterID": "e4:5f:01:d9:db:35"
+  },
+  "DV019": {
+    "SpeakerClusterID": "e4:5f:01:d9:db:35",
+    "SourceID": "H53.102"
+  },
+  "DV020": {
+    "DigitalSignageID": "54:78:C9:B8:48:C8",
+    "SourceID": "H53.102"
+  }
+}

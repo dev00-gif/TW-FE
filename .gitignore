@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.content-collections/
+.tanstack/
+.env
+.env.*
+!.env.example
+.DS_Store
+*.log
+prisma/generated/
+src/routeTree.gen.ts
+public/*
+!public/lock-images/

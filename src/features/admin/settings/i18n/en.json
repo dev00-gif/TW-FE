@@ -1,0 +1,24 @@
+{
+  "title": "System settings",
+  "description": "Manage website information and media storage.",
+  "loading": "Loading...",
+  "tabs": { "website": "Website information", "media": "Media" },
+  "website": {
+    "title": "Website information",
+    "description": "Name and branding images shown on the website.",
+    "siteName": "Website name",
+    "logo": "Logo",
+    "favicon": "Favicon",
+    "imageHint": "Choose an image from the media library or enter an image path.",
+    "chooseImage": "Choose from media",
+    "removeImage": "Remove image",
+    "pickerTitle": "Choose image",
+    "close": "Close",
+    "save": "Save changes",
+    "saving": "Saving...",
+    "saved": "Website information saved",
+    "saveFailed": "Could not save website information",
+    "loadFailed": "Could not load website information",
+    "retry": "Try again"
+  }
+}

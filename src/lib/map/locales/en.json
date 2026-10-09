@@ -1,0 +1,11 @@
+{
+  "switch_base_map": "Switch base map",
+  "base_maps": "Base Maps",
+  "overlays": "Overlays",
+  "image_overlays": "Image Overlays",
+  "zoom_in": "Zoom in",
+  "zoom_out": "Zoom out",
+  "find_my_location": "Find my location",
+  "toggle_fullscreen": "Toggle fullscreen",
+  "reset_bearing": "Reset bearing to north"
+}

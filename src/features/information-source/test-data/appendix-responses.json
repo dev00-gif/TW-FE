@@ -1,0 +1,319 @@
+{
+  "DV001": {
+    "SendStatus": 0,
+    "Description": "Packet accepted successfully",
+    "Content": {},
+    "Errors": []
+  },
+  "DV002": {
+    "SendStatus": 0,
+    "Description": "Packet accepted successfully",
+    "Content": {},
+    "Errors": []
+  },
+  "DV003": {
+    "SendStatus": 0,
+    "Description": "Packet accepted successfully",
+    "Content": {},
+    "Errors": []
+  },
+  "DV004": {
+    "SendStatus": 0,
+    "Description": "Packet accepted successfully",
+    "Content": {},
+    "Errors": []
+  },
+  "DV005": {
+    "SendStatus": 0,
+    "Description": "Packet accepted successfully",
+    "Content": {},
+    "Errors": []
+  },
+  "DV006": {
+    "SendStatus": 0,
+    "Description": "Packet accepted successfully",
+    "Content": {},
+    "Errors": []
+  },
+  "DV007": {
+    "SendStatus": 0,
+    "Description": "Packet accepted successfully",
+    "Content": {},
+    "Errors": []
+  },
+  "DV008": {
+    "SendStatus": 0,
+    "Description": "Packet accepted successfully",
+    "Content": {},
+    "Errors": []
+  },
+  "DV009": {
+    "SendStatus": 0,
+    "Description": "Packet accepted successfully",
+    "Content": {},
+    "Errors": []
+  },
+  "DV010": {
+    "SendStatus": 0,
+    "Description": "Packet accepted successfully",
+    "Content": {},
+    "Errors": []
+  },
+  "DV011": {
+    "SendStatus": 0,
+    "Description": "Packet accepted successfully",
+    "Content": {},
+    "Errors": []
+  },
+  "DV012": {
+    "SendStatus": 0,
+    "Description": "Packet accepted successfully",
+    "Content": {},
+    "Errors": []
+  },
+  "DV013": {
+    "SendStatus": 0,
+    "Description": "Packet accepted successfully",
+    "Content": {},
+    "Errors": []
+  },
+  "DV014": {
+    "SendStatus": 0,
+    "Description": "Packet accepted successfully",
+    "Content": {},
+    "Errors": []
+  },
+  "DV015": {
+    "SendStatus": 0,
+    "Description": "Packet accepted successfully",
+    "Content": {},
+    "Errors": []
+  },
+  "DV016": {
+    "SendStatus": 0,
+    "Description": "Packet accepted successfully",
+    "Content": {},
+    "Errors": []
+  },
+  "DV017": {
+    "SendStatus": 0,
+    "Description": "Packet accepted successfully",
+    "Content": {},
+    "Errors": []
+  },
+  "DV018": {
+    "Content": [
+      {
+        "topic": "thietbi/3db4fbe7-d6aa-4334-bbbb-6e0df650b190",
+        "action": "pubsub"
+      },
+      {
+        "topic": "tinh/h18",
+        "action": "pubsub"
+      },
+      {
+        "topic": "xa/h18.101",
+        "action": "pubsub"
+      }
+    ],
+    "SendStatus": 0,
+    "Description": "Device MQTT registration successful"
+  },
+  "DV019": {
+    "SendStatus": 0,
+    "Description": "Playlist retrieved successfully",
+    "Content": {
+      "SourceID": "H53",
+      "SourceName": "Tỉnh Tây Ninh",
+      "DestinationID": "H53.102",
+      "DestinationName": "Phường Bình Minh",
+      "RecipientAreas": [
+        {
+          "DestinationID": "H53.102",
+          "DestinationName": "Phường Bình Minh",
+          "SpeakerClusterID": [
+            "e4:5f:01:d9:db:35"
+          ]
+        }
+      ],
+      "PlaylistID": "3abbc26e-ccf7-4311-8200-bd40231eebac",
+      "PlaylistName": "Phường Bình Minh 25/02/2026",
+      "Bulletins": [
+        {
+          "BulletinID": "35305",
+          "BulletinType": "5",
+          "Priority": "3",
+          "Title": "Tiếp Sóng Truyền Thanh Đài Tỉnh Tây Ninh",
+          "CategoryType": "1",
+          "Summary": "Tiếp Sóng Truyền Thanh Đài Tỉnh Tây Ninh",
+          "ProducedAt": 1770000892,
+          "Duration": "00:30:00",
+          "Author": {
+            "FullName": "Cán bộ tỉnh",
+            "PenName": "canbotinh",
+            "Email": "canbotinh@tayninh.gov.vn"
+          },
+          "Content": "https://hubip-ttn.tayninh.gov.vn/live/tayninh.stream/playlist.m3u8",
+          "CreatedAreaID": "H53.102",
+          "CreatedAreaName": "Phường Bình Minh",
+          "BulletinDetails": [
+            {
+              "Name": "Nguồn tin",
+              "Value": "H53"
+            }
+          ],
+          "NewsSource": "H53",
+          "Relay": 0,
+          "RelaySource": "H53",
+          "BroadcastDays": [
+            {
+              "BroadcastDate": 1772038800,
+              "BroadcastWindows": [
+                {
+                  "StartTime": 1772058600,
+                  "EndTime": 1772060400
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "DailyBulletins": [
+        {
+          "BulletinID": "38494",
+          "BulletinType": "3",
+          "Priority": "3",
+          "Title": "THỜI SỰ 26,27/02/2026",
+          "CategoryType": "1",
+          "Summary": "THỜI SỰ 26,27/02/2026",
+          "ProducedAt": 1772017910,
+          "Duration": "00:16:08",
+          "Author": {
+            "FullName": "Cán bộ phường Bình Minh",
+            "PenName": "cbvhxbinhminh",
+            "Email": "cbvhxbinhminh@tayninh.gov.vn"
+          },
+          "Content": "https://storage-ttn.tayninh.gov.vn/2026/2/25/18/453368439_ctts_so-37_26.2-va-27.2.2026.mp3",
+          "CreatedAreaID": "H53.102",
+          "CreatedAreaName": "Phường Bình Minh",
+          "BulletinDetails": [
+            {
+              "Name": "Nguồn tin",
+              "Value": "H53.102"
+            }
+          ],
+          "NewsSource": "H53.102",
+          "Relay": 1,
+          "RelaySource": "",
+          "BroadcastStartDate": 1772409600,
+          "BroadcastEndDate": 1772928000,
+          "BroadcastWindows": [
+            {
+              "StartTime": 1772434800,
+              "EndTime": 1772435768
+            }
+          ]
+        }
+      ]
+    },
+    "Errors": []
+  },
+  "DV020": {
+    "SendStatus": 0,
+    "Description": "Playlist retrieved successfully",
+    "Content": {
+      "SourceID": "H53",
+      "SourceName": "Tỉnh Tây Ninh",
+      "DestinationID": "H53.102",
+      "DestinationName": "Phường Bình Minh",
+      "RecipientAreas": [
+        {
+          "DestinationID": "H53.102",
+          "DestinationName": "Phường Bình Minh",
+          "DigitalSignageID": [
+            "54:78:C9:B8:48:C8"
+          ]
+        }
+      ],
+      "ScreenPartition": "0",
+      "PlaylistID": "3abbc26e-ccf7-4311-8200-bd40231eebac",
+      "PlaylistName": "Phường Bình Minh 25/02/2026",
+      "Bulletins": [
+        {
+          "BroadcastZone": "0",
+          "PublicBulletinID": "35305",
+          "BulletinType": "4",
+          "Priority": "3",
+          "Title": "Chương trình thời sự đài Tỉnh Tây Ninh",
+          "CategoryType": "1",
+          "Summary": "Chương trình thời sự đài Tỉnh Tây Ninh",
+          "ProducedAt": 1770000892,
+          "Duration": "00:30:00",
+          "Author": {
+            "FullName": "Cán bộ tỉnh",
+            "PenName": "canbotinh",
+            "Email": "canbotinh@tayninh.gov.vn"
+          },
+          "Content": "https://storage-ttn.tayninh.gov.vn/2026/2/2/17/4k_uhd_60pfs_22mbs.mp4",
+          "CreatedAreaID": "H53.102",
+          "CreatedAreaName": "Phường Bình Minh",
+          "BulletinDetails": [
+            {
+              "Name": "Nguồn tin",
+              "Value": "H53"
+            }
+          ],
+          "NewsSource": "H53",
+          "BroadcastDays": [
+            {
+              "BroadcastDate": 1772038800,
+              "BroadcastWindows": [
+                {
+                  "StartTime": 1772058600,
+                  "EndTime": 1772060400
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "DailyBulletins": [
+        {
+          "BroadcastZone": "0",
+          "PublicBulletinID": "38494",
+          "BulletinType": "4",
+          "Priority": "3",
+          "Title": "Tuyên truyền ý thức khi tham gia giao thông",
+          "CategoryType": "1",
+          "Summary": "Tuyên truyền ý thức khi tham gia giao thông",
+          "ProducedAt": 1772017910,
+          "Duration": "00:16:08",
+          "Author": {
+            "FullName": "Cán bộ phường Bình Minh",
+            "PenName": "cbvhxbinhminh",
+            "Email": "cbvhxbinhminh@tayninh.gov.vn"
+          },
+          "Content": "https://storage-ttn.tayninh.gov.vn/2026/2/25/18/tuyen_truyen.mp4",
+          "CreatedAreaID": "H53.102",
+          "CreatedAreaName": "Phường Bình Minh",
+          "BulletinDetails": [
+            {
+              "Name": "Nguồn tin",
+              "Value": "H53.102"
+            }
+          ],
+          "NewsSource": "H53.102",
+          "BroadcastStartDate": 1772409600,
+          "BroadcastEndDate": 1772928000,
+          "BroadcastWindows": [
+            {
+              "StartTime": 1772434800,
+              "EndTime": 1772435768
+            }
+          ]
+        }
+      ]
+    },
+    "Errors": []
+  }
+}

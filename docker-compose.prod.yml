@@ -1,0 +1,26 @@
+name: somics-operation-website
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        VITE_API_BASE_URL: ${VITE_API_BASE_URL:?Set VITE_API_BASE_URL}
+    image: somics-operation-website:prod
+    container_name: somics-operation-website
+    restart: unless-stopped
+    expose:
+      - '3000'
+    environment:
+      NODE_ENV: production
+      PORT: '3000'
+      HOST: '0.0.0.0'
+    env_file:
+      - .env
+    networks:
+      - dokploy-network
+
+networks:
+  dokploy-network:
+    external: true

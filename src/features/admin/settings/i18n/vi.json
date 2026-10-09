@@ -1,0 +1,24 @@
+{
+  "title": "Cài đặt hệ thống",
+  "description": "Quản lý thông tin website và lưu trữ media.",
+  "loading": "Đang tải...",
+  "tabs": { "website": "Thông tin website", "media": "Media" },
+  "website": {
+    "title": "Thông tin website",
+    "description": "Tên và hình ảnh nhận diện hiển thị trên website.",
+    "siteName": "Tên website",
+    "logo": "Logo",
+    "favicon": "Favicon",
+    "imageHint": "Chọn ảnh từ thư viện media hoặc nhập đường dẫn ảnh.",
+    "chooseImage": "Chọn từ media",
+    "removeImage": "Xóa ảnh",
+    "pickerTitle": "Chọn ảnh",
+    "close": "Đóng",
+    "save": "Lưu thay đổi",
+    "saving": "Đang lưu...",
+    "saved": "Đã lưu thông tin website",
+    "saveFailed": "Không thể lưu thông tin website",
+    "loadFailed": "Không thể tải thông tin website",
+    "retry": "Thử lại"
+  }
+}
