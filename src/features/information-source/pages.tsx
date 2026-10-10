@@ -31,6 +31,7 @@ import {
 } from './service'
 import { simulateConnection } from './simulation'
 import { createsBulletins, newBulletinRequest } from './request'
+import { toEnglishPacket, toVietnamesePacket } from './packet-fields'
 import type { SimulationStep } from './simulation'
 import { asPackets, bulletinKey, channelName, deviceKey, field } from './types'
 import type {
@@ -343,7 +344,7 @@ export function ServicesPage() {
   const payloadText =
     draft?.code === code
       ? draft.text
-      : JSON.stringify(active?.example ?? {}, null, 2)
+      : JSON.stringify(toVietnamesePacket(active?.example ?? {}), null, 2)
   const send = async () => {
     setError('')
     setResponse(null)
@@ -353,11 +354,15 @@ export function ServicesPage() {
       const value: unknown = JSON.parse(payloadText)
       if (!value || typeof value !== 'object' || Array.isArray(value))
         throw new Error('Request phải là một JSON object')
+      const englishPacket = toEnglishPacket(value as Packet)
       const packet = randomizeIds
-        ? newBulletinRequest(code, value as Packet)
-        : (value as Packet)
+        ? newBulletinRequest(code, englishPacket)
+        : englishPacket
       if (createsBulletins(code) && randomizeIds) {
-        setDraft({ code, text: JSON.stringify(packet, null, 2) })
+        setDraft({
+          code,
+          text: JSON.stringify(toVietnamesePacket(packet), null, 2),
+        })
       }
       const result = await informationSourceService.execute(
         code,
@@ -399,7 +404,7 @@ export function ServicesPage() {
         </Button>
       }
       title="20 dịch vụ API"
-      description="Chọn dịch vụ, nạp request mẫu và gửi đến hệ thống. Request và response giữ cấu trúc Phụ lục 4, dùng tên trường tiếng Anh."
+      description="Chọn dịch vụ, nạp request mẫu và gửi đến hệ thống. Request JSON hiển thị tên trường tiếng Việt theo Phụ lục 4 và tự chuyển sang tiếng Anh khi gửi."
     >
       <ConnectionSimulator />
       {catalog.isError && (
@@ -512,7 +517,7 @@ export function ServicesPage() {
                   <span>
                     <span className="font-medium">Tạo mã mới mỗi lần gửi</span>
                     <span className="mt-1 block text-xs text-muted-foreground">
-                      Tự tạo PlaylistID và mã bản tin mới. Tắt để cập nhật bản
+                      Tự tạo LichPhatID và mã bản tin mới. Tắt để cập nhật bản
                       tin bằng mã đang có.
                     </span>
                   </span>
@@ -577,12 +582,12 @@ export function BulletinsPage() {
       actions={
         <Button variant="outline" asChild>
           <Link to="/dashboard/integration/data" search={{ kind: 'bulletins' }}>
-            Quản lý {'bản tin'}
+            Quản lý bản tin
           </Link>
         </Button>
       }
       title="Bản tin"
-      description="Bản tin nhận từ nguồn tỉnh qua DV002, DV003, DV010 và DV011. Xem nội dung, tác giả, mức ưu tiên và phiên bản."
+      description="Bản tin trung ương: tạo và biên tập trong Quản lý bản tin. Hệ thống địa phương đồng bộ cả bản nháp, bản đã xuất bản và các thay đổi mỗi phút khi job được bật."
     >
       {filters.bar}
       {rows.length ? (
@@ -590,6 +595,7 @@ export function BulletinsPage() {
           headers={[
             'Bản tin',
             'Kênh',
+            'Trạng thái',
             'Ưu tiên',
             'Phiên bản',
             'Nhận lúc',
@@ -610,6 +616,7 @@ export function BulletinsPage() {
               <td>
                 <ChannelBadge channel={item.channel} />
               </td>
+              <td>{item.publicationStatus === 'draft' ? 'Bản nháp' : 'Đã xuất bản'}</td>
               <td>
                 {item.priority === '1' ? (
                   <StateBadge state="emergency" />

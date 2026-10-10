@@ -17,7 +17,10 @@ type TokenResponse = {
 const ACCESS_TOKEN_KEY = 'access_token'
 const REFRESH_TOKEN_KEY = 'refresh_token'
 export const apiBaseUrl =
-  import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:3000/api/v1'
+  import.meta.env.VITE_API_BASE_URL?.trim() ||
+  (import.meta.env.PROD
+    ? 'http://tw.45.252.248.184.nip.io/api/v1'
+    : 'http://localhost:3000/api/v1')
 
 const storage = () =>
   typeof window === 'undefined' ? null : window.localStorage

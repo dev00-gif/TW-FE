@@ -10,6 +10,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import type { ReactNode } from 'react'
 import { ServicesPage, BulletinsPage } from './pages'
 import { informationSourceService } from './service'
+import { toEnglishPacket } from './packet-fields'
 import type { Packet, ServiceCode, ServiceDefinition, Workspace } from './types'
 import requests from './test-data/appendix-examples.json'
 
@@ -102,6 +103,7 @@ beforeEach(() => {
         const row = {
           id: old?.id ?? crypto.randomUUID(),
           channel: 'radio' as const,
+          publicationStatus: 'draft' as const,
           externalId: String(item.BulletinID),
           title: String(item.Title),
           priority: String(item.Priority),
@@ -131,8 +133,20 @@ describe('API send and bulletin list', () => {
     const page = mount(<ServicesPage />)
     const request =
       await screen.findByLabelText<HTMLTextAreaElement>('Request JSON')
-    const packet = structuredClone(requests.DV002)
-    packet.Bulletins[0].Title = 'Bản tin kiểm tra cập nhật'
+    const packet = JSON.parse(request.value) as Packet
+    expect(packet.NguonID).toBe(requests.DV002.SourceID)
+    expect(packet.SourceID).toBeUndefined()
+    const areas = packet.DanhSachDiaBanNhan as Packet[]
+    expect(areas[0].CumLoaID).toEqual(
+      requests.DV002.RecipientAreas[0].SpeakerClusterID,
+    )
+    const bulletins = packet.DanhSachBanTin as Packet[]
+    expect(bulletins[0].TacGia).toEqual({
+      TenDayDu: requests.DV002.Bulletins[0].Author.FullName,
+      ButDanh: requests.DV002.Bulletins[0].Author.PenName,
+      Email: requests.DV002.Bulletins[0].Author.Email,
+    })
+    bulletins[0].TieuDe = 'Bản tin kiểm tra cập nhật'
     fireEvent.change(request, { target: { value: JSON.stringify(packet) } })
     fireEvent.click(screen.getByRole('button', { name: 'Gửi request' }))
     await screen.findByRole('link', { name: 'Xem bản tin vừa gửi' })
@@ -144,11 +158,16 @@ describe('API send and bulletin list', () => {
       ).toBe(false),
     )
     const first = vi.mocked(informationSourceService.execute).mock.calls[0][1]
-    expect(first.PlaylistID).not.toBe(packet.PlaylistID)
+    expect(first.PlaylistID).not.toBe(packet.LichPhatID)
     expect((first.Bulletins as Packet[])[0].BulletinID).not.toBe(
-      packet.Bulletins[0].BulletinID,
+      bulletins[0].BanTinID,
     )
-    expect(JSON.parse(request.value)).toEqual(first)
+    expect((first.Bulletins as Packet[])[0].Title).toBe(
+      'Bản tin kiểm tra cập nhật',
+    )
+    expect(JSON.parse(request.value).LichPhatID).toBe(first.PlaylistID)
+    expect(JSON.parse(request.value).PlaylistID).toBeUndefined()
+    expect(toEnglishPacket(JSON.parse(request.value))).toEqual(first)
     fireEvent.click(screen.getByRole('button', { name: 'Gửi request' }))
     await waitFor(() =>
       expect(informationSourceService.execute).toHaveBeenCalledTimes(2),
@@ -184,6 +203,62 @@ describe('API send and bulletin list', () => {
       requests.DV002,
       expect.any(String),
     )
+  })
+
+  it.each(catalog)(
+    '$code sends the English contract from the request editor',
+    async ({ code, example }) => {
+      vi.mocked(informationSourceService.execute).mockResolvedValue({
+        SendStatus: 0,
+        Description: 'Đã tiếp nhận',
+        Content: {},
+      })
+      mount(<ServicesPage />)
+      await screen.findByLabelText('Request JSON')
+      fireEvent.click(
+        screen.getByRole('button', { name: new RegExp(`^${code}`) }),
+      )
+      const checkbox = screen.queryByRole('checkbox', {
+        name: /Tạo mã mới mỗi lần gửi/,
+      })
+      if (checkbox) fireEvent.click(checkbox)
+      fireEvent.click(screen.getByRole('button', { name: 'Gửi request' }))
+      await waitFor(() =>
+        expect(informationSourceService.execute).toHaveBeenCalledWith(
+          code,
+          example,
+          code === 'DV001' ? undefined : expect.any(String),
+        ),
+      )
+    },
+  )
+
+  it('restores the Vietnamese sample when reloading or switching services', async () => {
+    mount(<ServicesPage />)
+    const editor =
+      await screen.findByLabelText<HTMLTextAreaElement>('Request JSON')
+    fireEvent.change(editor, { target: { value: '{}' } })
+    fireEvent.click(screen.getByRole('button', { name: 'Nạp mẫu' }))
+    expect(JSON.parse(editor.value).NguonID).toBe(requests.DV002.SourceID)
+    fireEvent.click(screen.getByRole('button', { name: /^DV020/ }))
+    expect(JSON.parse(editor.value)).toEqual({
+      BangDienTuID: requests.DV020.DigitalSignageID,
+      NguonID: requests.DV020.SourceID,
+    })
+  })
+
+  it('reports conflicting aliases without sending a packet', async () => {
+    mount(<ServicesPage />)
+    const editor =
+      await screen.findByLabelText<HTMLTextAreaElement>('Request JSON')
+    const packet = JSON.parse(editor.value) as Packet
+    packet.SourceID = 'another-source'
+    fireEvent.change(editor, { target: { value: JSON.stringify(packet) } })
+    fireEvent.click(screen.getByRole('button', { name: 'Gửi request' }))
+    expect((await screen.findByRole('alert')).textContent).toBe(
+      'Tên trường bị trùng sau khi chuyển đổi: SourceID',
+    )
+    expect(informationSourceService.execute).not.toHaveBeenCalled()
   })
 
   it('shows request errors above the editor and does not report received bulletins', async () => {

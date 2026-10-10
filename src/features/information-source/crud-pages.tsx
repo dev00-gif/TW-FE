@@ -833,6 +833,11 @@ export function BusinessDataPage() {
                 </span>
               ),
               <div key="state">
+                {kind === 'bulletins' && (
+                  <p className="mb-1 text-xs font-medium">
+                    {row.publicationStatus === 'draft' ? 'Bản nháp' : 'Đã xuất bản'}
+                  </p>
+                )}
                 {row.state ? (
                   <StateBadge state={row.state} />
                 ) : (
@@ -989,6 +994,9 @@ function BusinessEditor({
     return value
   }
   const [channel, setChannel] = useState<Channel>(row?.channel ?? 'radio')
+  const [publicationStatus, setPublicationStatus] = useState<'draft' | 'published'>(
+    row?.publicationStatus ?? 'draft',
+  )
   const [packetText, setPacketText] = useState(
     JSON.stringify(
       row?.status ?? row?.payload ?? sample(row?.channel ?? 'radio'),
@@ -1084,6 +1092,7 @@ function BusinessEditor({
               channel,
               packet: parse(packetText),
               ...(row?.revision ? { revision: row.revision } : {}),
+              ...(kind === 'bulletins' ? { publicationStatus } : {}),
             }
       await sourceCrud.save(kind, input, row?.id)
       await saved()
@@ -1213,6 +1222,22 @@ function BusinessEditor({
                 </Field>
               ))}
             </div>
+            {kind === 'bulletins' && (
+              <Field label="Trạng thái bản tin">
+                <select
+                  aria-label="Trạng thái bản tin"
+                  className={inputClass}
+                  value={publicationStatus}
+                  disabled={view || pending}
+                  onChange={(event) =>
+                    setPublicationStatus(event.target.value as 'draft' | 'published')
+                  }
+                >
+                  <option value="draft">Bản nháp</option>
+                  <option value="published">Đã xuất bản</option>
+                </select>
+              </Field>
+            )}
             {kind === 'bulletins' && (
               <Field label="Mức ưu tiên">
                 <select

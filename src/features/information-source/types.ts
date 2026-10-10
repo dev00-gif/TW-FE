@@ -64,6 +64,7 @@ export type SourcePlaylist = Row & {
   revision: number
 }
 export type SourceBulletin = Row & {
+  publicationStatus: 'draft' | 'published'
   channel: Channel
   externalId: string
   title: string

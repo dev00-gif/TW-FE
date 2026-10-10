@@ -197,6 +197,48 @@ describe('service configuration and business CRUD screens', () => {
     expect(screen.queryByRole('button', { name: 'Xóa Mẫu đã lưu' })).toBeNull()
   })
 
+  it('saves a new bulletin as a draft by default', async () => {
+    search.kind = 'bulletins'
+    mount(<BusinessDataPage />)
+    fireEvent.click(await screen.findByRole('button', { name: 'Thêm bản tin' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Lưu dữ liệu' }))
+    await waitFor(() =>
+      expect(sourceCrud.save).toHaveBeenCalledWith(
+        'bulletins',
+        expect.objectContaining({ publicationStatus: 'draft' }),
+        undefined,
+      ),
+    )
+  })
+
+  it('creates a draft and sends the publication status when publishing a bulletin', async () => {
+    search.kind = 'bulletins'
+    mount(<BusinessDataPage />)
+    fireEvent.click(await screen.findByRole('button', { name: 'Thêm bản tin' }))
+    expect(
+      (
+        screen.getByRole('combobox', {
+          name: 'Trạng thái bản tin',
+        })
+      ).value,
+    ).toBe('draft')
+    fireEvent.change(
+      screen.getByRole('combobox', { name: 'Trạng thái bản tin' }),
+      { target: { value: 'published' } },
+    )
+    fireEvent.click(screen.getByRole('button', { name: 'Lưu dữ liệu' }))
+    await waitFor(() =>
+      expect(sourceCrud.save).toHaveBeenCalledWith(
+        'bulletins',
+        expect.objectContaining({
+          publicationStatus: 'published',
+          channel: 'radio',
+        }),
+        undefined,
+      ),
+    )
+  })
+
   it('creates a notification through the business-data form', async () => {
     mount(<BusinessDataPage />)
     fireEvent.click(screen.getByRole('button', { name: 'Thêm thông báo' }))

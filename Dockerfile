@@ -10,7 +10,7 @@ RUN npm ci
 FROM deps AS build
 COPY . .
 ENV NODE_ENV=production
-ARG VITE_API_BASE_URL
+ARG VITE_API_BASE_URL=http://tw.45.252.248.184.nip.io/api/v1
 ENV VITE_API_BASE_URL=${VITE_API_BASE_URL}
 RUN npm run build \
   && npm prune --omit=dev --ignore-scripts \

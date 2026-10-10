@@ -23,6 +23,7 @@ export type ServiceConfiguration = ConfigurationInput & {
   updatedAt: string
 }
 export type BusinessRecord = {
+  publicationStatus?: 'draft' | 'published'
   id: string
   channel?: Channel
   externalId?: string
@@ -40,6 +41,7 @@ export type BusinessRecord = {
   updatedAt: string
 }
 export type BusinessInput = {
+  publicationStatus?: 'draft' | 'published'
   channel?: Channel
   packet?: Packet
   revision?: number
